@@ -44,7 +44,6 @@ public class EmailGenaratorService {
                         })
                 }
         );
-
         logger.info("Sending request to Google Gemini API");
 
         // Do ReQuest
@@ -58,7 +57,7 @@ public class EmailGenaratorService {
 
         // extract and return Response
         String extractedResponse = extractResponseContent(response);
-        logger.info("Received response: {}", extractedResponse);
+        logger.info("\n Received response: \n {}", extractedResponse);
         return extractedResponse;
     }
 
