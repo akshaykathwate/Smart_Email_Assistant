@@ -26,10 +26,13 @@ function App() {
     setLoading(true);
     setError("");
     try {
-      const response = await axios.post("http://localhost:8080/generate", {
-        originalEmailContent,
-        tone,
-      });
+      const response = await axios.post(
+        "http://localhost:8080/api/email/generate",
+        {
+          originalEmailContent,
+          tone,
+        }
+      );
       setGeneratedReply(
         typeof response.data === "string"
           ? response.data
